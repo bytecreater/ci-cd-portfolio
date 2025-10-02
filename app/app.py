@@ -231,7 +231,7 @@ html_template = f"""
         <h2><i class="fas fa-cogs"></i> Skills</h2>
         <div class="card skills-card">
             <p><b>Programming:</b> <span class="skill-tag">Python</span> <span class="skill-tag">Java</span> <span class="skill-tag">C++</span> <span class="skill-tag">JavaScript</span> <span class="skill-tag">Shell Scripting</span></p>
-            <p><b>Cloud:</b> <span class="skill-tag">AWS (EC2, S3, IAM, RDS, Lambda)</span> <span class="skill-tag">GCP (Compute Engine, Cloud Storage)</span></p>
+            <p><b>Cloud:</b> <span class="skill-tag">AWS (EC2, S3, IAM, RDS, Lambda, EKS)</span> <span class="skill-tag">GCP (Compute Engine, Cloud Storage)</span></p>
             <p><b>DevOps Tools:</b> <span class="skill-tag">Docker</span> <span class="skill-tag">Kubernetes</span> <span class="skill-tag">Jenkins</span> <span class="skill-tag">Git/GitHub</span> <span class="skill-tag">GitHub Actions</span> <span class="skill-tag">Linux</span></p>
             <p><b>Databases:</b> <span class="skill-tag">MySQL</span> <span class="skill-tag">MongoDB</span></p>
             <p><b>Other:</b> <span class="skill-tag">Generative AI</span> <span class="skill-tag">UI/UX Design</span> <span class="skill-tag">System Design</span></p>
