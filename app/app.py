@@ -108,7 +108,6 @@ html_template = """
             <p><b>B.Tech in Computer Science Engineering</b><br>
             AISSMS Institute of Information Technology, Pune (2023 - 2027)
             <br>
-            Assalamualikum Zubair Bhai.
             </p>
         </div>
         
