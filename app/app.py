@@ -1,19 +1,23 @@
 from flask import Flask, render_template_string
 import base64
+import os
 
 app = Flask(__name__)
 
 # --- Image Data ---
-# Your JPG image has been encoded into a Base64 string.
-# This allows the image to be embedded directly in the HTML without needing a separate file.
-image_path = r'app\Gemini_Generated_Image_bvj2mgbvj2mgbvj2.png'
+# This creates a robust path that works whether you run the script locally or in Docker.
+# It finds the directory where the script (`app.py`) is located...
+script_dir = os.path.dirname(os.path.abspath(__file__))
+# ...and then joins that directory with the image filename.
+image_path = os.path.join(script_dir, 'Gemini_Generated_Image_bvj2mgbvj2mgbvj2.png')
+
 try:
     with open(image_path, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read()).decode('utf-8')
-    IMAGE_DATA_URI = f"data:image/jpeg;base64,{encoded_string}"
+    # Corrected the data type to image/png to match your file extension
+    IMAGE_DATA_URI = f"data:image/png;base64,{encoded_string}" 
 except FileNotFoundError:
-    # This is a fallback in case the image file is not found when you run the script.
-    # It will show a placeholder instead of crashing.
+    # This is a fallback in case the image file is not found.
     print(f"Warning: Image file '{image_path}' not found. Using a placeholder.")
     IMAGE_DATA_URI = "https://via.placeholder.com/150"
 
@@ -291,6 +295,4 @@ def home():
     return render_template_string(html_template)
 
 if __name__ == "__main__":
-    # Important: Make sure the image file ('Gemini_Generated_Image_bvj2mgbvj2mgbvj2.jpg')
-    # is in the same directory as this script when you run it.
     app.run(host="0.0.0.0", port=5000, debug=True)
