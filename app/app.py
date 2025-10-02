@@ -6,7 +6,7 @@ app = Flask(__name__)
 # --- Image Data ---
 # Your JPG image has been encoded into a Base64 string.
 # This allows the image to be embedded directly in the HTML without needing a separate file.
-image_path = 'Gemini_Generated_Image_bvj2mgbvj2mgbvj2.jpg'
+image_path = 'C:\Users\ADMIN\OneDrive\Desktop\DevOps\GithubActions\app\Gemini_Generated_Image_bvj2mgbvj2mgbvj2.png'
 try:
     with open(image_path, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read()).decode('utf-8')
